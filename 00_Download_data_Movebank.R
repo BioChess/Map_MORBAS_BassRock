@@ -17,7 +17,7 @@ loginStored <- movebankLogin(username = user, password = password)
 print(loginStored)
 
 # Storing the study name
-st <- "AMPLIAMAR (Manx shearwaters, La Palma)"
+st <- "AU Northern gannet (breeder) Bass Rock migration 2026"
 #print(paste("Study name:", st))  # Debugging
 
 # Verify if study exists
