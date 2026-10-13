@@ -13,7 +13,7 @@ gps.df <- read.csv(latest_file)
 gps.df$datetimeGMT <- as.POSIXct(gps.df$datetimeGMT, format="%Y-%m-%d %H:%M:%S", tz="GMT")
 
 # Filtrar datos de los últimos 2 días
-lst_days <- as.POSIXct(Sys.time(), tz="GMT") - (2 * 24 * 60 * 60)  # Hace 2 días
+lst_days <- as.POSIXct(Sys.time(), tz="GMT") - (7 * 24 * 60 * 60)  # Hace 2 días
 gps.df2 <- gps.df %>% filter(datetimeGMT >= lst_days)
 
 # Crear la paleta de colores para cada birdID
