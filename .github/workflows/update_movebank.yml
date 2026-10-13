@@ -1,9 +1,17 @@
 name: Actualizar datos Movebank
-
-#on:
- # schedule:
-   # - cron: '0 */12 * * *'  # Ejecutar cada 12 horas
+on:
+  schedule:
+    - cron: '0 0 * * *'
   workflow_dispatch:
+    inputs:
+      diagnostico:
+        description: 'Ejecutar diagnóstico de red antes de descargar'
+        required: false
+        default: 'false'
+        type: choice
+        options:
+          - 'false'
+          - 'true'
 
 jobs:
   update-movebank:
